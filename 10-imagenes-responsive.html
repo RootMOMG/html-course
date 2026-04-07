@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 10 - Imagenes Responsive</title>
+</head>
+<body>
+    
+    <img srcset="
+    https://picsum.photos/400/400 400w,
+    https://picsum.photos/600/600 600w,
+    https://picsum.photos/800/800 800w
+    " sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px" alt="Imagen Responsive">
+
+    <picture>
+        <source srcset="https://picsum.photos/400/400" media="(max-width: 400px)">
+        <source srcset="https://picsum.photos/600/600" media="(max-width: 600px)">
+        <source srcset="https://picsum.photos/800/800" media="(max-width: 800px)">
+        <img src="https://picsum.photos/1000/1000" alt="Imagen Responsive">
+    </picture>
+
+    <img 
+    src="https://picsum.photos/1000/1000"
+     alt="Imagen Responsive" 
+     srcset="
+     https://picsum.photos/400/400 400w,
+     https://picsum.photos/600/600 600w,
+     https://picsum.photos/800/800 800w
+     " 
+     sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px"
+     loading="lazy"
+     decoding="async"
+     width="600"
+     height="400"
+     >
+</body>
+</html>
